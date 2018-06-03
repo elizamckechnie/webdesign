@@ -100,6 +100,8 @@ p {
 	font-size: 30px;
 	width: 50%;
 	padding: 200px;
+	padding-bottom: 400px;
+	text-shadow: -2px 0 5px black, 0 2px 5px black, 2px 0 5px black, 0 -2px 5px black;
 	
 }
 
@@ -147,18 +149,19 @@ p {
 .loader span {
     display: inline-block;
     bottom: -80;
-    width: 80px;
+    width: 50px;
     height: 80px;
-	margin: -280px 100px 54px  -34px;
-	background-size: 100%;
-    background:url("images/pic1.jpg");
-    
+	margin: -350px 100px 54px  -34px;
+	background:url("images/heart-min.png");
+	background-size: 100% 100%;
     -webkit-animation: loader 10s infinite  linear;
     -moz-animation: loader 10s infinite  linear;
 	animation-direction: reverse;
 }
 .loader span:nth-child(5n+5) {
 
+	background:url("images/spade-min.png");
+	background-size: 100% 100%;
     -webkit-animation-delay: 1.3s;
     -moz-animation-delay: 1.3s;
 }
@@ -166,10 +169,14 @@ p {
 
     -webkit-animation-delay: 1.5s;
     -moz-animation-delay: 1.5s;
+	background:url("images/club-min.png");
+	background-size: 100% 100%;
 
 }
 .loader span:nth-child(2n+5) {
 
+	background:url("images/diamond-min.png");
+	background-size: 100% 100%;
     -webkit-animation-delay: 1.7s;
     -moz-animation-delay: 1.7s;
 
@@ -177,24 +184,32 @@ p {
 
 .loader span:nth-child(3n+10) {
 
+	background:url("images/spade-min.png");
+	background-size: 100% 100%;
     -webkit-animation-delay: 2.7s;
     -moz-animation-delay: 2.7s;
 
 }
 .loader span:nth-child(7n+2) {
-
+	
+		background:url("images/spade-min.png");
+	background-size: 100% 100%;
     -webkit-animation-delay: 3.5s;
     -moz-animation-delay: 3.5s;
 
 }
 .loader span:nth-child(4n+5) {
 
+	background:url("images/club-min.png");
+	background-size: 100% 100%;
     -webkit-animation-delay: 5.5s;
     -moz-animation-delay: 5.5s;
 
 }
 .loader span:nth-child(3n+7) {
 
+	background:url("images/diamond-min.png");
+	background-size: 100% 100%;
     -webkit-animation-delay: 8s;
     -moz-animation-delay: 8s;
 
@@ -203,7 +218,7 @@ p {
   0% {
     width: 80px;
     height: 80px;
-    opacity: 0;
+    opacity: 1;
 	-webkit-transform: translate(0, 0px) rotateZ(0deg);
   }
   75% {
