@@ -12,13 +12,13 @@ body {
 	font-family: 'Josefin Slab', serif;
 }
 
-
+/* ------------- Navigation Bar -------------------------*/
 /* Navbar container */
 .navbar {
   overflow: hidden;
   background-color: #333;
  font-family: 'Josefin Slab', serif;
- padding: 20px;
+ padding: 0px;
 }
 
 /* Links inside the navbar */
@@ -27,7 +27,7 @@ body {
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 16px;
   text-decoration: none;
 }
 
@@ -43,7 +43,7 @@ body {
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  padding: 20px 16px;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
@@ -84,10 +84,12 @@ body {
   display: block;
 }
 
-img {
-	width: 15%;
-	padding: 200 px; 
-	transform: skewY(5deg);
+/* ------------- For Chapter 1 Part 1 -------------------------*/
+/* falling alice picture  */
+p {
+	font-size: 30px;
+	width: 50%;
+	padding: 30px;
 	
 }
 
@@ -100,33 +102,11 @@ z-index: 999;
 
 }
 
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+#next{
+	width:15%;
+	bottom: 10px; /*You may also use fixed depending on your needs.*/
+
 }
-
-input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-*/ ------------- For Chapter 1 Part 1 -------------------------*/ 
-
 
 .container{
 	pointer-events: none;
@@ -148,7 +128,7 @@ input[type=submit]:hover {
     width: 80px;
     height: 80px;
 	margin: 280px -800px 54px  -34px;
-    background:url("http://premiumcoding.com/CSSTricks/fallingLeaves/leaf.png");
+    background:url("images/pic1.jpg");
     
     -webkit-animation: loader 10s infinite  linear;
     -moz-animation: loader 10s infinite  linear;
@@ -214,7 +194,7 @@ input[type=submit]:hover {
 }
 
 
-*/ ------------- For Chapter 1 Part 2 -------------------------
+/* ------------- For Chapter 1 Part 2 -------------------------*/
 .column {
     float: left;
     width: 20%;
