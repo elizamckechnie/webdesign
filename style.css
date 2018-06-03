@@ -12,6 +12,16 @@ body {
 	font-family: 'Josefin Slab', serif;
 }
 
+h1 {
+	font-size: 100px;
+	padding: 50px;
+}
+
+h3{
+	padding: 50px;
+	width: 40%;
+}
+
 /* ------------- Navigation Bar -------------------------*/
 /* Navbar container */
 .navbar {
@@ -85,22 +95,33 @@ body {
 }
 
 /* ------------- For Chapter 1 Part 1 -------------------------*/
-/* falling alice picture  */
+
 p {
 	font-size: 30px;
 	width: 50%;
-	padding: 30px;
+	padding: 200px;
 	
 }
 
+/* falling alice picture  */
 #overlay{
-width:15%;
-position:fixed; /*You may also use fixed depending on your needs.*/
-left:40%;
-top:50%; /*If you want it at the bottom you probably want bottom:0 instead*/
-z-index: 999;
+	width:15%;
+	position:fixed; /*You may also use fixed depending on your needs.*/
+	left:40%;
+	top:50%; /*If you want it at the bottom you probably want bottom:0 instead*/
+	z-index: 999;
+	-webkit-animation: mymove 4s infinite;
 
 }
+
+@-webkit-keyframes mymove {
+    0% {top: 40%;}
+    50% {top: 45%;}
+	100% {top: 40%;}
+	animation-timing-function: ease;
+}
+
+
 
 #next{
 	width:15%;
@@ -108,6 +129,7 @@ z-index: 999;
 
 }
 
+/* falling pieces  */
 .container{
 	pointer-events: none;
 	top:0px;
@@ -127,11 +149,13 @@ z-index: 999;
     bottom: -80;
     width: 80px;
     height: 80px;
-	margin: 280px -800px 54px  -34px;
+	margin: -280px 100px 54px  -34px;
+	background-size: 100%;
     background:url("images/pic1.jpg");
     
     -webkit-animation: loader 10s infinite  linear;
     -moz-animation: loader 10s infinite  linear;
+	animation-direction: reverse;
 }
 .loader span:nth-child(5n+5) {
 
@@ -142,54 +166,57 @@ z-index: 999;
 
     -webkit-animation-delay: 1.5s;
     -moz-animation-delay: 1.5s;
+
 }
 .loader span:nth-child(2n+5) {
 
     -webkit-animation-delay: 1.7s;
     -moz-animation-delay: 1.7s;
+
 }
 
 .loader span:nth-child(3n+10) {
 
     -webkit-animation-delay: 2.7s;
     -moz-animation-delay: 2.7s;
+
 }
 .loader span:nth-child(7n+2) {
 
     -webkit-animation-delay: 3.5s;
     -moz-animation-delay: 3.5s;
+
 }
 .loader span:nth-child(4n+5) {
 
     -webkit-animation-delay: 5.5s;
     -moz-animation-delay: 5.5s;
+
 }
 .loader span:nth-child(3n+7) {
 
     -webkit-animation-delay: 8s;
     -moz-animation-delay: 8s;
+
 }
 @-webkit-keyframes loader {
   0% {
     width: 80px;
     height: 80px;
-    opacity: 1;
-	
+    opacity: 0;
 	-webkit-transform: translate(0, 0px) rotateZ(0deg);
   }
   75% {
     width: 80px;
     height: 80px;
     opacity: 1;
-
-	-webkit-transform: translate(100px, -600px) rotateZ(30deg); 
+	-webkit-transform: translate(100px, 100px) rotateZ(30deg); 
   }
   100% {
     width: 80px;
     height: 80px;
-    opacity: 0;
-
-	-webkit-transform: translate(150px, -800px) rotateZ(60deg);
+    opacity: 1;
+	-webkit-transform: translate(150px, 2000px) rotateZ(60deg);
   }
 }
 
