@@ -15,12 +15,33 @@ body {
 h1 {
 	font-size: 100px;
 	padding: 50px;
+	font-weight: 900;
 }
 
 h3{
 	padding: 50px;
 	width: 40%;
 }
+
+p {
+	font-size: 30px;
+	width: 50%;
+	padding: 200px;
+	padding-bottom: 400px;
+	text-shadow: -2px 0 5px black, 0 2px 5px black, 2px 0 5px black, 0 -2px 5px black;
+	
+}
+
+a {
+	color: #444;
+	font-weight: 900;
+}
+
+a:hover {
+	
+	font-size:25px;
+}
+
 
 /* ------------- Navigation Bar -------------------------*/
 /* Navbar container */
@@ -96,21 +117,14 @@ h3{
 
 /* ------------- For Chapter 1 Part 1 -------------------------*/
 
-p {
-	font-size: 30px;
-	width: 50%;
-	padding: 200px;
-	padding-bottom: 400px;
-	text-shadow: -2px 0 5px black, 0 2px 5px black, 2px 0 5px black, 0 -2px 5px black;
-	
-}
+
 
 /* falling alice picture  */
 #overlay{
-	width:15%;
+	width:20%;
 	position:fixed; /*You may also use fixed depending on your needs.*/
 	left:40%;
-	top:50%; /*If you want it at the bottom you probably want bottom:0 instead*/
+	top:60%; /*If you want it at the bottom you probably want bottom:0 instead*/
 	z-index: 999;
 	-webkit-animation: mymove 4s infinite;
 
@@ -237,20 +251,41 @@ p {
 
 
 /* ------------- For Chapter 1 Part 2 -------------------------*/
-.column {
-    float: left;
-    width: 20%;
-    padding: 5px;
+.door-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.door-container > img {
+	max-width: 100px;
 }
 
-/* Clearfix (clear floats) */
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-
-img.door:hover {
+.door-container > img:hover {
 	opacity: 0.5;
 }
+
+.floor {
+	display: flex;
+	flex-direction: column;
+	background:url("images/floor.jpg");
+}
+.floor > p {
+	padding-bottom: 20px;
+	padding-top: 20px;
+	width:60%;
+}
+
+.table {
+	display: flex;
+	align-items: baseline;
+}
+
+.table > img{
+	
+	max-width: 100px;
+}
+
+
+
+
