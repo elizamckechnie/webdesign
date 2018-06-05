@@ -251,7 +251,7 @@ a:hover {
 
 
 /* ------------- For Chapter 1 Part 2 -------------------------*/
-.door-container {
+#door-container {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
@@ -259,13 +259,22 @@ a:hover {
   max-width: 100%;
   overflow: hidden;
 }
-.door-container > img {
+#door-container > img {
 	padding-left: 20px;
 	padding-right: 20px;	
-	max-width: 500px;
 }
 
-.door-container > img:hover {
+.zoom-in {
+	max-width: 500px;
+	background-color: #00f;
+}
+
+.zoom-out {
+	max-width: 200px;
+	background-color: #f0f;
+}
+
+#door-container > img:hover {
 	opacity: 0.5;
 }
 
@@ -273,6 +282,8 @@ a:hover {
 	display: flex;
 	flex-direction: column;
 	background:url("images/floor.jpg");
+	background-size: cover;
+	align-items: center;
 }
 .floor > p {
 	padding-bottom: 20px;
@@ -281,17 +292,19 @@ a:hover {
 }
 
 .table {
-	width: 60%;
+	height: 200px;
 	display: flex;
+	justify-content: space-around;
 	align-items: baseline;
+	padding-bottom: 100px;
 }
 
-.table > img{
-	
+.table img{
+
 	width: 100px;
 }
 
-.table > img:hover{
+.table img:hover{
 	
 	width: 150px;
 }
