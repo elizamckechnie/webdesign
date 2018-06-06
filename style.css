@@ -1,9 +1,4 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-
-
+/* ------------- General formatting for all pages -------------------------*/
 body {
 	background: black; 
 	margin: 0px;
@@ -19,7 +14,6 @@ h1 {
 }
 
 h3{
-	color: #555;
 	padding: 50px;
 	width: 40%;
 }
@@ -30,7 +24,6 @@ p {
 	padding: 200px;
 	padding-bottom: 400px;
 	text-shadow: -2px 0 5px black, 0 2px 5px black, 2px 0 5px black, 0 -2px 5px black;
-	
 }
 
 a {
@@ -38,7 +31,6 @@ a {
 }
 
 a:hover {
-	
 	font-size:25px;
 }
 
@@ -76,16 +68,16 @@ a:hover {
   color: white;
   padding: 20px 16px;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  font-family: inherit; 
+  margin: 0;
 }
 
-/* Add a red background color to navbar links on hover */
+/* Change background colour on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: black;
 }
 
-/* Dropdown content (hidden by default) */
+/*format dropdown bar*/
 .dropdown-content {
   display: none;
   position: absolute;
@@ -115,52 +107,37 @@ a:hover {
   display: block;
 }
 
-/* ------------- About Page -------------------------*/
-
-
 /* ------------- For Chapter 1 Part 1 -------------------------*/
-
-
-
 /* falling alice picture  */
 #overlay{
 	width:20%;
-	position:fixed; /*You may also use fixed depending on your needs.*/
+	position:fixed;
 	left:40%;
-	top:60%; /*If you want it at the bottom you probably want bottom:0 instead*/
+	top:60%; 
 	z-index: 999;
-	
+	animation: aliceMove 4s infinite;
+	animation-timing-function: ease;
 }
-
-@keyframes mymove {
+/*Animation for falling alice picture  */
+@keyframes aliceMove {
+	
     0% {top: 40%;}
     50% {top: 45%;}
 	100% {top: 40%;}
-	animation-timing-function: ease;
 }
-
-
-
-#next{
-	width:15%;
-	bottom: 10px; /*You may also use fixed depending on your needs.*/
-
-}
-
-/* falling pieces  */
+/* falling cards container */
 .container{
 	pointer-events: none;
 	top:0px;
 	width:100%;
 	height:100%;
 	position:absolute;
-	left:0%;
-
+	left:0;
 }
-
+/* Create cards */
 .cards span {
     display: inline-block;
-    bottom: -80px;
+    bottom: -80;
     width: 50px;
     height: 80px;
 	margin: -350px 100px 54px  -34px;
@@ -169,42 +146,36 @@ a:hover {
     animation: cards 10s infinite  linear;
 	animation-direction: reverse;
 }
-.cards span:nth-child(3n+5) {
-
+/*stagger cards */
+.cards span:nth-child(3n+1) {
 	background:url("images/spade-min.png");
 	background-size: 100% 100%;
     animation-delay: 1s;
 }
-.cards span:nth-child(2n+2) {
-
-    animation-delay: 1.5s;
+.cards span:nth-child(2n+3) {
 	background:url("images/club-min.png");
 	background-size: 100% 100%;
+	animation-delay: 1.5s;
 
 }
-.cards span:nth-child(5n+5) {
-
+.cards span:nth-child(n+5) {
 	background:url("images/diamond-min.png");
 	background-size: 100% 100%;
     animation-delay: 1.7s;
 }
 
-.cards span:nth-child(n+10) {
+.cards span:nth-child(n+2) {
 
 	background:url("images/spade-min.png");
 	background-size: 100% 100%;
-	animation-delay: 2s;
-
+    animation-delay: 2s;
 }
 .cards span:nth-child(4n+2) {
-	
 	background:url("images/spade-min.png");
 	background-size: 100% 100%;
     animation-delay: 3s;
-
 }
 .cards span:nth-child(2n+5) {
-
 	background:url("images/club-min.png");
 	background-size: 100% 100%;
     animation-delay: 4.3s;
@@ -214,8 +185,8 @@ a:hover {
 	background:url("images/diamond-min.png");
 	background-size: 100% 100%;
     animation-delay: 8s;
-
 }
+/*create card animation */
 @keyframes cards {
   0% {
     width: 50px;
@@ -231,6 +202,7 @@ a:hover {
 
 
 /* ------------- For Chapter 1 Part 2 -------------------------*/
+/*create door container*/
 #door-container {
   display: flex;
   flex-wrap: nowrap;
@@ -239,26 +211,24 @@ a:hover {
   max-width: 100%;
   overflow: hidden;
 }
+/*Format door sizes*/
 #door-container > img {
-	
 	padding-left: 20px;
 	padding-right: 20px;
 }
-
+/*styling for zoomed out mode*/
 .zoom-out {
 	max-width: 300px;
 }
-
+/*styling for zoomed in mode*/
 .zoom-in {
 	max-width: 500px;
 }
-
-
-
+/*door hover changes the opacity*/
 #door-container > img:hover {
 	opacity: 0.7;
 }
-
+/*Create the floor*/
 .floor {
 	display: flex;
 	flex-direction: column;
@@ -266,29 +236,32 @@ a:hover {
 	background-size: cover;
 	align-items: center;
 }
+/*format text on the floor*/
 .floor > p {
 	padding-bottom: 20px;
 	padding-top: 20px;
 	width:60%;
 }
-
+/*Create the containner to house table elements*/
 .table {
 	height: 200px;
 	display: flex;
 	justify-content: space-around;
 	align-items: baseline;
 }
-
+/*format table elements*/
 .table img{
 
 	width: 100px;
 }
-
+/*increase the size when hovered over*/
 .table img:hover{
 	
 	width: 110px;
 }
 
+/* ------------- For Chapter 1 END -------------------------*/
+/*format bee image*/
 #bee{
 position:absolute;
 max-width: 100px;
