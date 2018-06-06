@@ -19,6 +19,7 @@ h1 {
 }
 
 h3{
+	color: #555;
 	padding: 50px;
 	width: 40%;
 }
@@ -114,6 +115,9 @@ a:hover {
   display: block;
 }
 
+/* ------------- About Page -------------------------*/
+
+
 /* ------------- For Chapter 1 Part 1 -------------------------*/
 
 
@@ -125,11 +129,10 @@ a:hover {
 	left:40%;
 	top:60%; /*If you want it at the bottom you probably want bottom:0 instead*/
 	z-index: 999;
-	-webkit-animation: mymove 4s infinite;
-
+	
 }
 
-@-webkit-keyframes mymove {
+@keyframes mymove {
     0% {top: 40%;}
     50% {top: 45%;}
 	100% {top: 40%;}
@@ -157,27 +160,24 @@ a:hover {
 
 .cards span {
     display: inline-block;
-    bottom: -80;
+    bottom: -80px;
     width: 50px;
     height: 80px;
 	margin: -350px 100px 54px  -34px;
 	background:url("images/heart-min.png");
 	background-size: 100% 100%;
-    -webkit-animation: cards 10s infinite  linear;
-    -moz-animation: cards 10s infinite  linear;
+    animation: cards 10s infinite  linear;
 	animation-direction: reverse;
 }
 .cards span:nth-child(3n+5) {
 
 	background:url("images/spade-min.png");
 	background-size: 100% 100%;
-    -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
+    animation-delay: 1s;
 }
 .cards span:nth-child(2n+2) {
 
-    -webkit-animation-delay: 1.5s;
-    -moz-animation-delay: 1.5s;
+    animation-delay: 1.5s;
 	background:url("images/club-min.png");
 	background-size: 100% 100%;
 
@@ -186,53 +186,46 @@ a:hover {
 
 	background:url("images/diamond-min.png");
 	background-size: 100% 100%;
-    -webkit-animation-delay: 1.7s;
-    -moz-animation-delay: 1.7s;
-
+    animation-delay: 1.7s;
 }
 
 .cards span:nth-child(n+10) {
 
 	background:url("images/spade-min.png");
 	background-size: 100% 100%;
-    -webkit-animation-delay: 2s;
-    -moz-animation-delay: 2s;
+	animation-delay: 2s;
 
 }
 .cards span:nth-child(4n+2) {
 	
 	background:url("images/spade-min.png");
 	background-size: 100% 100%;
-    -webkit-animation-delay: 3s;
-    -moz-animation-delay: 3s;
+    animation-delay: 3s;
 
 }
 .cards span:nth-child(2n+5) {
 
 	background:url("images/club-min.png");
 	background-size: 100% 100%;
-    -webkit-animation-delay: 4.3s;
-    -moz-animation-delay: 4.3s;
-
+    animation-delay: 4.3s;
 }
 .cards span:nth-child(3n+7) {
 
 	background:url("images/diamond-min.png");
 	background-size: 100% 100%;
-    -webkit-animation-delay: 8s;
-    -moz-animation-delay: 8s;
+    animation-delay: 8s;
 
 }
-@-webkit-keyframes cards {
+@keyframes cards {
   0% {
     width: 50px;
     height: 80px;
-	-webkit-transform: translate(0, 0px) rotateZ(0deg);
+	transform: translate(0, 0px) rotateZ(0deg);
   }
   100% {
     width: 50px;
     height: 80px;
-	-webkit-transform: translate(150px, 5000px) rotateZ(60deg);
+	transform: translate(150px, 5000px) rotateZ(60deg);
   }
 }
 
@@ -295,6 +288,9 @@ a:hover {
 	
 	width: 110px;
 }
-/* ------------- For Chapter 1 END -------------------------*/
 
-
+#bee{
+position:absolute;
+max-width: 100px;
+pointer-events: none;
+}
