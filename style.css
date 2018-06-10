@@ -248,6 +248,17 @@ a {
 	padding-right: 20px;
 	transition: transform .2s;
 }
+
+/*styling for zoomed out mode*/
+.zoom-outout {
+	max-width: 100px;
+}
+
+/*styling for zoomed out mode*/
+.zoom-outoutBlue {
+	max-width: 50px;
+}
+
 /*styling for zoomed out mode*/
 .zoom-out {
 	max-width: 300px;
@@ -310,17 +321,17 @@ transition: transform .2s;
 	max-width: 100px;
 	pointer-events: none;
     cursor: none;
-	
 }
 
-
+/*Position Audio*/
 audio{
-position: absolute;
-bottom: 0;
-right: 0;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 
 /*-------------------------References Page -------------------------*/
+/*format bee image*/
 #about {
     box-sizing: border-box;
 }
